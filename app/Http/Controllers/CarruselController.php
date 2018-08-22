@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Carrusel; 
 
 class CarruselController extends Controller
 {
@@ -13,7 +14,9 @@ class CarruselController extends Controller
      */
     public function index()
     {
-        //
+        $carrusels= Carrusel::orderBy('id','DESC')->paginate(5);
+        return view('carrusels.index', compact('carrusels'));
+
     }
 
     /**
@@ -45,7 +48,9 @@ class CarruselController extends Controller
      */
     public function show($id)
     {
-        //
+        $carrusel = Carrusel::find($id);
+        return view('carrusels.show', compact('carrusel'));
+
     }
 
     /**
@@ -79,6 +84,13 @@ class CarruselController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $carrusel = Carrusel::find($id);
+      $carrusel->delete();
+
+      return back()->with('info','La imagen fue eliminada del carrusel');
+
+        
+
+
     }
 }

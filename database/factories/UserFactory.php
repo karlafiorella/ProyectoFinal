@@ -21,3 +21,12 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Carrusel::class, function (Faker $faker) {
+    return [
+       'file'  => $faker->imageUrl($width = 50, $height=100),
+       'title'  => $faker->sentence(2),
+       'description' => $faker->text(100)
+      
+   ];
+});
