@@ -21,5 +21,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('carousels', 'CarouselController');
+Route::resource('carrusels', 'CarruselController');
 

@@ -118,6 +118,9 @@ return [
     */
 
     'attributes' => [
+        'name'  => 'nombre',
+        'short' => 'descripción breve',
+        'body'  => 'descripción',
         'file'  => 'Archivo',
         'tittle' => 'titulo de la imagen',
         'description'  => 'descripción'

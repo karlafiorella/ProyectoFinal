@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Product;
-use App\Carousel;
+use App\Carrusel;
 
 use Illuminate\Http\Request;
 
@@ -13,14 +12,14 @@ class FrontendController extends Controller
            //OrdenBy me da en que order voy a mostrar los registros asd or desc
 
            // $products = Product::orderBy('id', 'asc')->paginate(4);
-            $carousels = Carousel::orderBy('id', 'asc')->paginate(5);
+            $carrusels = Carrusel::orderBy('id', 'asc')->paginate(5);
 
            //Coloco las tablas que voy a mostrar en el welcome
            //$products2 = Product::orderBy('id', 'desc')->paginate(3);
            //$products3 = Product::orderBy('id', 'desc')->paginate(3);
 
            //Si temgo varias paginas debo hacer un metodo para cada uno de ellas
-            return view('welcome', compact('carousels'));
+            return view('welcome', compact('carrusels'));
         }
 
     public function __construct()
