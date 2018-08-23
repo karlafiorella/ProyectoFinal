@@ -1,6 +1,6 @@
 <div class="form-group">
-    {{ Form::label('file', 'Imagen') }}
-    {{ Form::file('file') }}
+     {{ Form::label('file', 'Imagen') }}
+     {{ Form::file('file') }}
 </div>
 
 <div class="form-group">

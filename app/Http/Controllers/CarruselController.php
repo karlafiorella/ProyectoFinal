@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Carrusel; 
+use App\Http\Requests\CarruselRequest;
+use Illuminate\Support\Facades\Storage;
 
 class CarruselController extends Controller
 {
@@ -26,7 +28,7 @@ class CarruselController extends Controller
      */
     public function create()
     {
-        //
+                return view('carrusels.create');
     }
 
     /**
@@ -35,9 +37,25 @@ class CarruselController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CarruselRequest $request)
     {
-        //
+        $carrusel = new Carrusel;
+
+       $carrusel->file   = $request->file;
+       $carrusel->title   = $request->title;
+       $carrusel->description  = $request->description;
+       
+
+       $carrusel->save();
+
+
+       //IMAGE
+       if($request->file('file')){
+           $path = Storage::disk('public')->put('image', $request->file('file'));
+           $carrusel->fill(['file' => asset($path)])->save();
+       }
+
+       return redirect()->route('carrusels.index')->with('info', 'La imagen fue guardada en el carrusel.');
     }
 
     /**
@@ -61,7 +79,9 @@ class CarruselController extends Controller
      */
     public function edit($id)
     {
-        //
+        $carrusel = Carrusel::find($id);
+        return view('carrusels.edit', compact('carrusel'));
+
     }
 
     /**
@@ -71,10 +91,25 @@ class CarruselController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+        public function update(CarruselRequest $request, $id)
     {
-        //
+        $carrusel = Carrusel::find($id);
+
+         if($request->file('file')){
+           $path = Storage::disk('public')->put('image', $request->file('file'));
+           $carrusel->fill(['file' => asset($path)])->save();
+       }
+
+        $carrusel ->title   =   $request->title;
+        $carrusel ->description    =   $request->description;
+       
+
+        $carrusel->save();
+
+        return redirect()->route('carrusels.index')->with('info', 'La imagen del carrusel fue actualizada.');
+
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -89,7 +124,7 @@ class CarruselController extends Controller
 
       return back()->with('info','La imagen fue eliminada del carrusel');
 
-        
+
 
 
     }
