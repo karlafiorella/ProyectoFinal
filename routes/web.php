@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('carrusels', 'CarruselController');
 Route::resource('featureds', 'FeaturedController');
 Route::resource('servicios', 'ServicioController');
+Route::resource('abouts', 'AboutController');
+Route::resource('portfolios', 'PortfolioController');

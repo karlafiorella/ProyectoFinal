@@ -14,13 +14,13 @@
 
 		<h2>
 			<a href="{{ route('carrusels.index', $carrusel->id) }}" class="btn btn-primary float-right">Listado</a>
-			{{ $carrusel->file }}
+			{{ $carrusel->title }}
 			<a href="{{ route('carrusels.edit', $carrusel->id) }}" class="btn btn-primary float-right mr-3">Editar</a>
 		</h2>
 		<p>
-			{{ $carrusel->title }}
-		</p>
 			{!! $carrusel->description !!}
+		</p>
+			
 	</div>
 	</div>
 </div>

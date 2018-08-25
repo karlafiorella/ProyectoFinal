@@ -29,4 +29,6 @@ $factory->define(App\Carrusel::class, function (Faker $faker) {
        'description' => $faker->text(100)
       
    ];
+
+   
 });
