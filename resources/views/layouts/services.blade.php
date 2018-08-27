@@ -5,8 +5,8 @@
       <div class="container">
 
         <header class="section-header wow fadeInUp">
-          <h3>Services</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+          <h3>Servicios</h3>
+          <p></p>
         </header>
 
         <div class="row">

@@ -21,7 +21,7 @@
               <div class="carousel-content">
                 <h2>{{ $carrusel->title }}</h2>
                 <p>{{ $carrusel->description }}</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <a href="#featured-services" class="btn-get-started scrollto">Conócenos</a>
               </div>
             </div>
           </div>

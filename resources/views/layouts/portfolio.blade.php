@@ -5,16 +5,16 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
+          <h3 class="section-title">Películas y Series</h3>
         </header>
 
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter="*" class="filter-active">Todas</li>
+              <li data-filter=".filter-app">Películas</li>
+              <li data-filter=".filter-card">Series</li>
+              <li data-filter=".filter-web">Documentales</li>
             </ul>
           </div>
         </div>
@@ -26,7 +26,7 @@
               <figure>
                 <img src="{{ $portfolio->file }}" class="img-fluid" alt="">
                 <a href="{{ $portfolio->file }}" data-lightbox="portfolio" data-title="{{ $portfolio->title }}" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">

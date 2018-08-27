@@ -22,7 +22,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios= Portfolio::orderBy('id','DESC')->paginate(5);
+        $portfolios= Portfolio::orderBy('id','DESC')->paginate(9);
         return view('portfolios.index', compact('portfolios'));
 
     }
