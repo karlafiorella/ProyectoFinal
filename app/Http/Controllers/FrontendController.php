@@ -6,6 +6,7 @@ use App\Featured;
 use App\Servicio;
 use App\About;
 use App\Portfolio;
+use App\Team;
 
 
 use Illuminate\Http\Request;
@@ -21,13 +22,14 @@ class FrontendController extends Controller
             $servicios = Servicio::orderBy('id', 'asc')->paginate(6);
             $abouts = About::orderBy('id', 'asc')->paginate(6);
             $portfolios = Portfolio::orderBy('id', 'asc')->paginate(9);
+            $teams = Team::orderBy('id', 'asc')->paginate(5);
 
            //Coloco las tablas que voy a mostrar en el welcome
            //$products2 = Product::orderBy('id', 'desc')->paginate(3);
            //$products3 = Product::orderBy('id', 'desc')->paginate(3);
 
            //Si temgo varias paginas debo hacer un metodo para cada uno de ellas
-            return view('welcome', compact('carrusels','featureds','servicios','abouts','portfolios'));
+            return view('welcome', compact('carrusels','featureds','servicios','abouts','portfolios','teams'));
         }
 
     public function __construct()

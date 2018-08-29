@@ -7,6 +7,7 @@
     @include('layouts.about');
     @include('layouts.services');
     @include('layouts.portfolio');
+    @include('layouts.team');
     @include('layouts.contact');
     
 

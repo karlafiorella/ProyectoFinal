@@ -38,7 +38,7 @@
         </div>
 
         <div class="form">
-          <div id="sendmessage">Tu mensaje ha sido enviado. Gracias!</div>
+          <div class="form" id="sendmessage">Tu mensaje ha sido enviado. Gracias!</div>
           <div id="errormessage">Error enviando tu mensaje. Por favor intenta de nuevo.</div>
           <form action="" method="post" role="form" class="contactForm">
             <div class="form-row">

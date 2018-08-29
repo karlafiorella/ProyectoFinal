@@ -26,3 +26,4 @@ Route::resource('featureds', 'FeaturedController');
 Route::resource('servicios', 'ServicioController');
 Route::resource('abouts', 'AboutController');
 Route::resource('portfolios', 'PortfolioController');
+Route::resource('teams', 'TeamController');

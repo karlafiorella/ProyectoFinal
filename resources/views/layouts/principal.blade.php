@@ -18,10 +18,7 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/fontawesome.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/brands.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/brands.css" rel="stylesheet">
+  <link rel="stylesheet" href="lib/font-awesome/css/fontawesome.min.css">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
